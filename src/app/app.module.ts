@@ -1,4 +1,3 @@
-import { Module1Module } from './module1/module1.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,7 +11,6 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Module1Module
   ],
   providers: [],
   bootstrap: [AppComponent]
