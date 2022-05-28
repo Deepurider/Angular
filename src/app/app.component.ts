@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -7,12 +7,18 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  @Output() parentEvent1 = new EventEmitter<string>();
+  text!:string
+  data!:string;
   constructor(
     public toastr:ToastrService
   ){}
-  ngOnInit() {
-    setTimeout(() => {
-      this.toastr.success('After 10 second' , 'status');
-    }, 10000);
+  ngOnInit() {}
+  onClick(){
+    this.toastr.success(this.text , 'Notification');
   }
 }
+
+
+
