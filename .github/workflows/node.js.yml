@@ -32,7 +32,7 @@ jobs:
     - run: npm run build && cp dist/project1/index.html dist/project1/404.html
 
     - name: Deploy
-      uses: actions/checkout@v3
+      uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
         branch: ProjectDeployment
         folder: dist/project1
