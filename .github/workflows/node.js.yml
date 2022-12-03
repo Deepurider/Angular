@@ -29,4 +29,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build
+    - run: npm run build && cp dist/project1
+
+    - name: Deploy
+      with:
+        branch: ProjectDeployment
+        folder: dist/project1
+
