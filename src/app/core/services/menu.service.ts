@@ -10,6 +10,6 @@ export class MenuService {
   }
 
   public getMenu() {
-    return this.http.get('../../../assets/data/menu.json');
+    return this.http.get('../../../Angular/assets/data/menu.json');
   }
 }
