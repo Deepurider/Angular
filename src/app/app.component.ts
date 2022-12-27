@@ -1,3 +1,4 @@
+import { MenuService } from './core/services/menu.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -7,16 +8,15 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  public sideMenus: any;
+  constructor(private menuService: MenuService) {
+    this.menuService.getMenu().subscribe((res: any) => {
+      console.log(res);
+      this.sideMenus = res;
+    })
+  }
 
-  @Output() parentEvent1 = new EventEmitter<string>();
-  text!:string
-  data!:string;
-  constructor(
-    public toastr:ToastrService
-  ){}
-  ngOnInit() {}
-  onClick(){
-    this.toastr.success(this.text , 'Notification');
+  ngOnInit(): void {
   }
 }
 
