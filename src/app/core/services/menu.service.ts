@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,6 @@ export class MenuService {
   }
 
   public getMenu() {
-    return this.http.get('../../../Angular/assets/data/menu.json');
+    return this.http.get(`../../../${environment.assetsUrl}assets/data/menu.json`);
   }
 }
