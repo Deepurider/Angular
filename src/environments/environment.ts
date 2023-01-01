@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  assetsUrl:''
+  assetsUrl:'https://github.com/Deepurider/Angular/blob/ProjectDeployment/assets/'
 };
 
 /*

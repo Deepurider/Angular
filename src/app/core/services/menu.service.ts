@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MenuService {
   public menu = undefined;
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   public getMenu() {
-    return this.http.get(`../../../${environment.assetsUrl}assets/data/menu.json`);
+    return this.http.get(`assets/data/menu.json`);
   }
 }
