@@ -1,8 +1,8 @@
 [
   {
-    "name": "Component Projecttion",
-    "component": "ComponentProjection",
-    "url": "component-projection",
+    "name": "Home",
+    "component": "HomeModule",
+    "url": "",
     "icon": null,
     "disabled": false
   }
