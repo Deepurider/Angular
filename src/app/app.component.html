@@ -1,17 +1,15 @@
 <mat-toolbar>
   <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <img
-          src="../Angular/assets/photos/angular.png"
-          class="navbar-brand"
-          height="50"
-          alt="logo"
-          srcset=""
-        />
-      </button>
-      &nbsp;
-      &nbsp;
-      <h1>Angular Application</h1>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <img
+        [src]="'assets/photos/angular.png'"
+        height="30"
+        alt="logo"
+        srcset=""
+      />
+    </button>
+    &nbsp; &nbsp;
+    <h1>Angular Application</h1>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
@@ -20,9 +18,10 @@
       <a
         mat-list-item
         *ngFor="let sideMenu of sideMenus"
-        routerLink="{{sideMenu.disabled?'':sideMenu?.url}}"
+        routerLink="{{ sideMenu.disabled ? '' : sideMenu?.url }}"
         [disabled]="sideMenu.disabled"
-        >{{ sideMenu?.name }} &nbsp; <mat-icon style="float: right;">{{ sideMenu.icon }}</mat-icon></a
+        >{{ sideMenu?.name }} &nbsp;
+        <mat-icon style="float: right">{{ sideMenu.icon }}</mat-icon></a
       >
     </mat-nav-list>
   </mat-sidenav>
