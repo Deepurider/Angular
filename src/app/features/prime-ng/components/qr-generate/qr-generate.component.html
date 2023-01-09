@@ -1,0 +1,41 @@
+<section>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col">
+        <h3>Enter QR Data</h3>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="urlString" />
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+        <button class="btn btn-primary" (click)="onGenerate()">
+          Generate QR
+        </button>
+      </div>
+    </div> -->
+  </div>
+</section>
+<hr />
+<section>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col">
+        <qrcode
+          *ngIf="urlString !== ''"
+          [qrdata]="urlString"
+          [width]="256"
+          [errorCorrectionLevel]="'M'"
+        ></qrcode>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-danger" *ngIf="urlString === ''">
+          No QR Data
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
