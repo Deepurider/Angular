@@ -5,5 +5,12 @@
     "url": "",
     "icon": null,
     "disabled": false
+  },
+  {
+    "name": "Prime Ng Material",
+    "component": "PrimeNgModule",
+    "url": "prime-ng",
+    "icon": null,
+    "disabled": false
   }
 ]

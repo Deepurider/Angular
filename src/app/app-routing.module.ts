@@ -8,6 +8,14 @@ const routes: Routes = [
       import('../app/features/home/home.module').then((m) => m.HomeModule),
     pathMatch: 'full',
   },
+  {
+    path: 'prime-ng',
+    loadChildren: () =>
+      import('../app/features/prime-ng/prime-ng.module').then(
+        (m) => m.PrimeNgModule
+      ),
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
