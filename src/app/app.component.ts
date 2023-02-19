@@ -1,3 +1,4 @@
+import { PassingDataService } from './features/subject/services/passing-data.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MenuService } from './core/services/menu.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,11 +12,15 @@ import { environment } from 'src/environments/environment';
 export class AppComponent implements OnInit {
   public sideMenus: any;
   public assetsUrl = environment.assetsUrl;
-  constructor(private menuService: MenuService) {
+  constructor(
+    private menuService: MenuService,
+    public passingDataService: PassingDataService
+  ) {
     this.menuService.getMenu().subscribe((res: any) => {
       this.sideMenus = res;
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

@@ -1,3 +1,5 @@
+import { SubjectModule } from './features/subject/subject.module';
+import { PassingDataService } from './features/subject/services/passing-data.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +23,7 @@ import { MatMaterialModule } from './shared/module/mat-material.module';
     HttpClientModule,
     MatMaterialModule,
   ],
-  providers: [],
+  providers: [PassingDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
