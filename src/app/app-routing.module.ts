@@ -16,6 +16,14 @@ const routes: Routes = [
       ),
     pathMatch: 'full',
   },
+  {
+    path: 'subject',
+    loadChildren: () =>
+      import('../app/features/subject/subject.module').then(
+        (m) => m.SubjectModule
+      ),
+    pathMatch: 'full',
+  }
 ];
 
 @NgModule({

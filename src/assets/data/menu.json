@@ -12,5 +12,12 @@
     "url": "prime-ng",
     "icon": null,
     "disabled": false
+  },
+  {
+    "name": "Subjects",
+    "component": "Subjects",
+    "url": "subject",
+    "icon": null,
+    "disabled": false
   }
 ]

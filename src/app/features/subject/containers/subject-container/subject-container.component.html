@@ -1,0 +1,28 @@
+<section>
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="text-center">Subjects In Angular</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="onStart()">Start</button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-3">
+        <app-simple-subject #simpleSubject></app-simple-subject>
+      </div>
+      <div class="col-md-3">
+        <app-behave-subject #behaveSubject></app-behave-subject>
+      </div>
+      <div class="col-md-3">
+        <app-reply-subject #replaySubject></app-reply-subject>
+      </div>
+      <div class="col-md-3">
+        <app-asyc-subject></app-asyc-subject>
+      </div>
+    </div>
+  </div>
+</section>
