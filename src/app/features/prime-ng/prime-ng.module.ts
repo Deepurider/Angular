@@ -7,15 +7,21 @@ import { PrimeNgContainerComponent } from './containers/prime-ng-container/prime
 import { QrGenerateComponent } from './components/qr-generate/qr-generate.component';
 import { FormsModule } from '@angular/forms';
 import { QRCodeModule } from 'angularx-qrcode';
+import { FullCalendarComponent } from './components/full-calendar/full-calendar.component';
+import { TabViewModule} from 'primeng/tabview';
+import {FullCalendarModule} from '@fullcalendar/angular';
+
 
 @NgModule({
-  declarations: [PrimeNgContainerComponent, QrGenerateComponent],
+  declarations: [PrimeNgContainerComponent, QrGenerateComponent, FullCalendarComponent],
   imports: [
     CommonModule,
     FormsModule,
     PrimeNgRoutingModule,
     PrimeNgMaterialModule,
-    QRCodeModule
+    QRCodeModule,
+    TabViewModule,
+    FullCalendarModule
   ],
 })
 export class PrimeNgModule {}

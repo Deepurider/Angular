@@ -10,7 +10,6 @@ export class PassingDataService {
   public subject$ = new Subject();
   public value1!: number;
   constructor() {
-    console.log('PassingDataConstructor');
     this.value1 = 1;
   }
 }
