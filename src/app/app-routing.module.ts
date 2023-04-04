@@ -1,5 +1,10 @@
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+const PageFoundData = {
+  pageTitle: 'Not Found',
+};
 
 const routes: Routes = [
   {
@@ -23,7 +28,24 @@ const routes: Routes = [
         (m) => m.SubjectModule
       ),
     pathMatch: 'full',
-  }
+  },
+  {
+    path: 'element',
+    loadChildren: () =>
+      import('../app/features/angular-element/angular-element.module').then(
+        (m) => m.AngularElementModule
+      ),
+    pathMatch: 'full',
+  },
+  {
+    path: 'page-not-found',
+    component: PageNotFoundComponent,
+    data: PageFoundData,
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({

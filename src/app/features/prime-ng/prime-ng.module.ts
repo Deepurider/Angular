@@ -10,10 +10,11 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { FullCalendarComponent } from './components/full-calendar/full-calendar.component';
 import { TabViewModule} from 'primeng/tabview';
 import {FullCalendarModule} from '@fullcalendar/angular';
+import { DataTableComponent } from './components/data-table/data-table.component';
 
 
 @NgModule({
-  declarations: [PrimeNgContainerComponent, QrGenerateComponent, FullCalendarComponent],
+  declarations: [PrimeNgContainerComponent, QrGenerateComponent, FullCalendarComponent, DataTableComponent],
   imports: [
     CommonModule,
     FormsModule,

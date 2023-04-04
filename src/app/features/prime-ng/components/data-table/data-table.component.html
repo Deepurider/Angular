@@ -1,0 +1,19 @@
+<p-table [value]="person" *ngIf="person.length > 0 && cols.length > 0">
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of cols">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-person>
+    <tr>
+      {{
+        display(person)
+      }}
+      <td *ngFor="let col of cols">
+        {{ person[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
