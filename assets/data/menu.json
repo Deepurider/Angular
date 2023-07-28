@@ -19,5 +19,19 @@
     "url": "subject",
     "icon": null,
     "disabled": false
+  },
+  {
+    "name": "Elements",
+    "component": "Elements",
+    "url": "element",
+    "icon": null,
+    "disabled": false
+  },
+  {
+    "name": "PageNotFound",
+    "component": "Subjects",
+    "url": "page-not-found",
+    "icon": null,
+    "disabled": false
   }
 ]
