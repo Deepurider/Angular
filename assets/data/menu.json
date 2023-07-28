@@ -4,34 +4,56 @@
     "component": "HomeModule",
     "url": "",
     "icon": null,
-    "disabled": false
+    "disabled": false,
+    "child": []
   },
   {
     "name": "Prime Ng Material",
     "component": "PrimeNgModule",
     "url": "prime-ng",
     "icon": null,
-    "disabled": false
+    "disabled": false,
+    "child": [
+      {
+        "name": "Full Calendar",
+        "component": "full-calendar",
+        "url": "prime-ng/full-calendar",
+        "icon": null,
+        "disabled": false,
+        "child": []
+      },
+      {
+        "name": "Qr Generate",
+        "component": "qr-generate",
+        "url": "prime-ng/generate-qr",
+        "icon": null,
+        "disabled": false,
+        "child": []
+      }
+    ]
   },
   {
     "name": "Subjects",
     "component": "Subjects",
     "url": "subject",
     "icon": null,
-    "disabled": false
+    "disabled": false,
+    "child": []
   },
   {
     "name": "Elements",
     "component": "Elements",
     "url": "element",
     "icon": null,
-    "disabled": false
+    "disabled": false,
+    "child": []
   },
   {
     "name": "PageNotFound",
     "component": "Subjects",
     "url": "page-not-found",
     "icon": null,
-    "disabled": false
+    "disabled": false,
+    "child": []
   }
 ]
