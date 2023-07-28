@@ -1,6 +1,10 @@
 export interface Menu {
-  path: string;
+  name: string;
   component: string;
+  url: string;
+  icon: string;
+  disabled: boolean;
+  child: Menu[];
 }
 
 export interface Person {

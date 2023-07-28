@@ -1,6 +1,4 @@
 import { PassingDataService } from './features/subject/services/passing-data.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { MenuService } from './core/services/menu.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -10,17 +8,17 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  public sideMenus: any;
+  public sideBarid = 'side-bar';
   public assetsUrl = environment.assetsUrl;
-  constructor(
-    private menuService: MenuService,
-    public passingDataService: PassingDataService
-  ) {
-    this.menuService.getMenu().subscribe((res: any) => {
-      this.sideMenus = res;
-    });
-  }
+  constructor(public passingDataService: PassingDataService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {}
+
+  public onOpen() {
+    const sideBar = document.getElementById(this.sideBarid);
+    if (sideBar) sideBar.style.width = '350px';
+
+    const main = document.getElementById('main');
+    if (main) main.style.width = '350px';
   }
 }

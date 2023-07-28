@@ -12,9 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatMaterialModule } from './shared/module/mat-material.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { VoiceRecorderComponent } from './features/voice-recorder/voice-recorder.component';
+import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, VoiceRecorderComponent],
+  declarations: [AppComponent, PageNotFoundComponent, VoiceRecorderComponent, SidenavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

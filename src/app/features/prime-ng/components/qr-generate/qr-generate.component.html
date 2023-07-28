@@ -1,11 +1,8 @@
 <section>
   <div class="container mt-4">
-    <div class="row">
+    <div class="row text-center">
       <div class="col">
-        <h3>Enter QR Data</h3>
-      </div>
-      <div class="col">
-        <input type="text" class="form-control" [(ngModel)]="urlString" />
+        <input type="text" class="form-control" [(ngModel)]="urlString" [placeholder]="'Enter text'"/>
       </div>
     </div>
   </div>
@@ -13,7 +10,7 @@
 <hr />
 <section>
   <div class="container mt-4">
-    <div class="row">
+    <div class="row text-center">
       <div class="col">
         <qrcode
           *ngIf="urlString !== ''"
@@ -25,9 +22,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <h1 class="text-danger" *ngIf="urlString === ''">
-          No QR Data
-        </h1>
+        <h1 class="text-danger" *ngIf="urlString === ''">No QR Data</h1>
       </div>
     </div>
   </div>

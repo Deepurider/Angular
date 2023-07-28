@@ -1,0 +1,34 @@
+<div id="side-bar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" (click)="onClose()">&times;</a>
+  <ul>
+    <li *ngFor="let sideMenu of sideMenus">
+      <a routerLink="{{ sideMenu.disabled ? '' : sideMenu?.url }}"
+        >{{ sideMenu?.name }} &nbsp;
+        <mat-icon style="float: right">{{ sideMenu.icon }}</mat-icon></a
+      >
+      <ul *ngIf="sideMenu.child.length > 0">
+        <li *ngFor="let sideMenuChild of sideMenu.child">
+          <a routerLink="{{ sideMenuChild.disabled ? '' : sideMenuChild?.url }}"
+            >{{ sideMenuChild?.name }} &nbsp;
+            <mat-icon style="float: right">{{
+              sideMenuChild.icon
+            }}</mat-icon></a
+          >
+          <ul *ngIf="sideMenuChild.child.length > 0">
+            <li *ngFor="let sideMenuChild2 of sideMenuChild.child">
+              <a
+                routerLink="{{
+                  sideMenuChild2.disabled ? '' : sideMenuChild2?.url
+                }}"
+                >{{ sideMenuChild2?.name }} &nbsp;
+                <mat-icon style="float: right">{{
+                  sideMenuChild2.icon
+                }}</mat-icon></a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

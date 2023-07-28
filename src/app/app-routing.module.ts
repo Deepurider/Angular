@@ -19,7 +19,6 @@ const routes: Routes = [
       import('../app/features/prime-ng/prime-ng.module').then(
         (m) => m.PrimeNgModule
       ),
-    pathMatch: 'full',
   },
   {
     path: 'subject',
@@ -27,7 +26,6 @@ const routes: Routes = [
       import('../app/features/subject/subject.module').then(
         (m) => m.SubjectModule
       ),
-    pathMatch: 'full',
   },
   {
     path: 'element',
@@ -35,7 +33,6 @@ const routes: Routes = [
       import('../app/features/angular-element/angular-element.module').then(
         (m) => m.AngularElementModule
       ),
-    pathMatch: 'full',
   },
   {
     path: 'page-not-found',

@@ -22,10 +22,6 @@ export class DataTableComponent {
     this.initiliazation();
   }
 
-  public display(person:Person){
-    console.log(this.callCount = this.callCount + 1);
-  }
-
   private initiliazation() {
     this.cols = [
       {

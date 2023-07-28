@@ -8,9 +8,6 @@
   </ng-template>
   <ng-template pTemplate="body" let-person>
     <tr>
-      {{
-        display(person)
-      }}
       <td *ngFor="let col of cols">
         {{ person[col.field] }}
       </td>

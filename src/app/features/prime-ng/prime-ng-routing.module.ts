@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'full-calendar',
     component: FullCalendarComponent,
   },
+  {
+    path: 'generate-qr',
+    component: QrGenerateComponent,
+  },
 ];
 
 @NgModule({
