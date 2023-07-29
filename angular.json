@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "deployUrl": "Angular/",
             "outputPath": "dist/project1",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -77,6 +78,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+
               "browserTarget": "project1:build:production"
             },
             "development": {
