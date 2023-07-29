@@ -7,9 +7,12 @@ import { environment } from 'src/environments/environment';
 })
 export class MenuService {
   public menu = undefined;
+  public url = environment.production
+    ? 'Angular/assets/data/menu.json'
+    : 'assets/data/menu.json';
   constructor(private http: HttpClient) {}
 
   public getMenu() {
-    return this.http.get(`assets/data/menu.json`);
+    return this.http.get(this.url);
   }
 }

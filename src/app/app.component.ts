@@ -9,6 +9,9 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent implements OnInit {
   public sideBarid = 'side-bar';
+  public imageUrl = environment.production
+    ? 'Angular'
+    : '' + 'assets/photos/angular-light.png';
   public assetsUrl = environment.assetsUrl;
   constructor(public passingDataService: PassingDataService) {}
 
