@@ -35,6 +35,20 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'ck-editor',
+    loadChildren: () =>
+      import('../app/features/ck-editor/ck-editor.module').then(
+        (m) => m.CkEditorDemoModule
+      ),
+  },
+  {
+    path: 'payments',
+    loadChildren: () =>
+      import('../app/features/payment/payment.module').then(
+        (m) => m.PaymentModule
+      ),
+  },
+  {
     path: 'page-not-found',
     component: PageNotFoundComponent,
     data: PageFoundData,

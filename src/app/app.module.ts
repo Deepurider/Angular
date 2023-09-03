@@ -1,4 +1,3 @@
-import { SubjectModule } from './features/subject/subject.module';
 import { PassingDataService } from './features/subject/services/passing-data.service';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +12,7 @@ import { MatMaterialModule } from './shared/module/mat-material.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { VoiceRecorderComponent } from './features/voice-recorder/voice-recorder.component';
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, VoiceRecorderComponent, SidenavComponent],
@@ -25,6 +25,7 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     BrowserAnimationsModule,
     HttpClientModule,
     MatMaterialModule,
+    NgOptimizedImage
   ],
   providers: [PassingDataService],
   bootstrap: [AppComponent],

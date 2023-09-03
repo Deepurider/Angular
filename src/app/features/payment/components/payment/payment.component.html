@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Online Payment Gateway</h1>
+    </div>
+  </div>
+  <form [formGroup]="paymentForm">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          formControlName="Name"
+          class="form-control"
+          placeholder="Your name"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          formControlName="Email"
+          class="form-control"
+          placeholder="Your Email"
+        />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <input
+          type="text"
+          formControlName="Mobile"
+          class="form-control"
+          placeholder="Mobile Number"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          formControlName="Ammount"
+          class="form-control"
+          placeholder="Amount"
+        />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col">
+        <p
+          *ngIf="paymentForm.invalid && paymentForm.touched"
+          class="text-danger"
+        >
+          Required to fill all fields.
+        </p>
+        <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

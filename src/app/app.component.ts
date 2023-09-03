@@ -1,7 +1,6 @@
 import { PassingDataService } from './features/subject/services/passing-data.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +14,8 @@ export class AppComponent implements OnInit {
   public assetsUrl = environment.assetsUrl;
   constructor(public passingDataService: PassingDataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   public onOpen() {
     const sideBar = document.getElementById(this.sideBarid);

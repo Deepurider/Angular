@@ -49,6 +49,22 @@
     "child": []
   },
   {
+    "name": "CK Editor",
+    "component": "CKEditor",
+    "url": "ck-editor",
+    "icon": null,
+    "disabled": false,
+    "child": []
+  },
+  {
+    "name": "Online Payments",
+    "component": "Payment",
+    "url": "payments",
+    "icon": null,
+    "disabled": false,
+    "child": []
+  },
+  {
     "name": "PageNotFound",
     "component": "Subjects",
     "url": "page-not-found",
